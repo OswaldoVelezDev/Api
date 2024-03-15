@@ -45,7 +45,7 @@ router.post('/', [
     }
 });
 
-// listar usuarios
+// listar productoras
 router.get('/', async function (req, res) {
 
     try {
@@ -60,7 +60,7 @@ router.get('/', async function (req, res) {
     res.send(productoras);
 });
 
-// actualizar usuario
+// actualizar productoras
 router.put('/:productoraId', [
     check('nombre', 'invalid.nombre').not().isEmpty(),
     check('estado', 'invalid.estado').isIn(['Activo', 'Inactivo']),

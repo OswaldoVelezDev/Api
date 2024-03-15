@@ -49,7 +49,7 @@ router.get('/', async function (req, res) {
     res.send(directores);
 });
 
-// actualizar usuario
+// actualizar directores
 router.put('/:directorId', [
     check('nombre', 'invalid.nombre').not().isEmpty(),
     check('estado', 'invalid.estado').isIn(['Activo', 'Inactivo']),
